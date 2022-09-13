@@ -1,4 +1,4 @@
-const { cocktails, landingSlides, users } = require('./db/db')
+const { cocktails, landingSlides, users } = require('../db/db')
 
 exports.Query = {
     cocktail: (parent, { id }, context) => {

@@ -1,4 +1,4 @@
-const { users } = require('./db/db')
+const { users } = require('../db/db')
 
 exports.Cocktail = {
     userLiked: ({ id }, args, context) => {

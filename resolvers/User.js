@@ -1,4 +1,4 @@
-const { cocktails } = require('./db/db')
+const { cocktails } = require('../db/db')
 
 exports.User = {
     cocktails: ({ id }, args, context) => {
