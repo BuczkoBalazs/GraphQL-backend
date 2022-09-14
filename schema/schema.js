@@ -8,7 +8,7 @@ exports.typeDefs = gql`
     landingSlide(id: ID!): LandingSlide
     landingSlides: [LandingSlide!]!
     user(id: ID!): User
-    users: [User!]!
+    users(filter: usersFilterInput): [User!]!
     vote(id: ID!): Vote
     votes: [Vote!]!
   }
@@ -20,7 +20,7 @@ exports.typeDefs = gql`
     ingredients: String!
     image: String!
     favourite: Boolean!
-    userLiked: [User!]!
+    userLiked(filter: usersFilterInput): [User!]!
     votes: [Vote!]!
   }
 
@@ -51,4 +51,8 @@ exports.typeDefs = gql`
     name: String
   }
   
+  input usersFilterInput {
+    age: Int
+  }
+
 `;
