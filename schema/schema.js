@@ -20,6 +20,7 @@ exports.typeDefs = gql`
     image: String!
     favourite: Boolean!
     userLiked: [User!]!
+    votes: [Vote!]!
   }
   type LandingSlide {
     id: ID!
@@ -32,6 +33,7 @@ exports.typeDefs = gql`
     email: String!
     age: Int!
     cocktails: [Cocktail!]!
+    votes: [Vote!]!
   }
   type Vote {
     id: ID!
