@@ -3,7 +3,11 @@ exports.Query = {
         const cocktail = cocktails.find(cocktail => cocktail.id === id)
         return cocktail ? cocktail : null 
     },
-    cocktails: (parent, args, { cocktails }) => cocktails,
+    cocktails: (parent, { filter }, { cocktails }) => {
+      return filter ?
+      cocktails.filter(cocktail => cocktail.name.toLowerCase().includes(filter.name.toLowerCase())) :
+      cocktails
+    },
     landingSlide: (parent, { id }, { landingSlides }) => {
         const slide = landingSlides.find(slide => slide.id === id)
         return slide ? slide : null 
