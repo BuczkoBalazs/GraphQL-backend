@@ -38,6 +38,6 @@ exports.typeDefs = gql`
     title: String!
     text: String!
     postedBy: User!
-    cocktail: Cocktail!
+    cocktailID: Cocktail!
   }
 `;

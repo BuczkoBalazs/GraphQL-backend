@@ -115,21 +115,21 @@ const landingSlides = [
       "name": "John Doe",
       "email": "john.doe@freemail.hu",
       "age": 83,
-      "favCocktails": ['1', '2', '3']
+      "favCocktails": ['1', '2', '3','9', '10']
     },
     {
       "id": "1",
       "name": "Jane Doe",
       "email": "jane.doe@freemail.hu",
       "age": 22,
-      "favCocktails": ['4', '5', '6']
+      "favCocktails": ['1', '2', '3', '4', '5', '6', '7', '8']
     },
     {
       "id": "2",
       "name": "Scooby Doo",
       "email": "scooby.doo@citromail.hu",
       "age": 35,
-      "favCocktails": ['7', '8', '9', '10']
+      "favCocktails": ['5', '6', '7', '8', '9', '10']
     }
   ];
 
@@ -138,22 +138,22 @@ const landingSlides = [
       "id": "0",
       "title": "Absolute the best!",
       "text": "Never had anything like that! Gives an absolute twist to your night!",
-      "postedBy": "2",
-      "cocktailID": "6"
+      "postedBy": '2',
+      "cocktailID": '6'
     },
     {
-      "id": "0",
+      "id": "1",
       "title": "Totally average",
       "text": "Good but nothing special.",
-      "postedBy": "1",
-      "cocktailID": "9"
+      "postedBy": '1',
+      "cocktailID": '9'
     },
     {
-      "id": "0",
+      "id": "2",
       "title": "Hard to create",
       "text": "Very complex but worth the trial!",
-      "postedBy": "0",
-      "cocktailID": "1"
+      "postedBy": '0',
+      "cocktailID": '8'
     }
   ];
 

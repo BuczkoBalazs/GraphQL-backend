@@ -3,6 +3,7 @@ const { typeDefs } = require('./schema/schema');
 const { Cocktail } = require('./resolvers/Cocktail');
 const { Query } = require('./resolvers/Query');
 const { User } = require('./resolvers/User');
+const { Vote } = require('./resolvers/Vote')
 const { cocktails, landingSlides, users, votes } = require('./db/db')
 
 const server = new ApolloServer({
@@ -10,7 +11,8 @@ const server = new ApolloServer({
   resolvers: {
     Cocktail,
     Query,
-    User
+    User,
+    Vote
   },
   context: {
     cocktails,
