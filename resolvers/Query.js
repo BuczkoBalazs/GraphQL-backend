@@ -13,5 +13,10 @@ exports.Query = {
       const user = users.find(user => user.id === id)
       return user ? user : null 
     },
-    users: (parent, args, { users }) => users
+    users: (parent, args, { users }) => users,
+    vote: (parent, { id }, { votes }) => {
+        const vote = votes.find(vote => vote.id === id)
+        return vote ? vote : null 
+      },
+    votes: (parent, args, { votes }) => votes,
 };
