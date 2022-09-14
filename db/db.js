@@ -133,8 +133,33 @@ const landingSlides = [
     }
   ];
 
+  const votes = [
+    {
+      "id": "0",
+      "title": "Absolute the best!",
+      "text": "Never had anything like that! Gives an absolute twist to your night!",
+      "postedBy": "2",
+      "cocktailID": "6"
+    },
+    {
+      "id": "0",
+      "title": "Totally average",
+      "text": "Good but nothing special.",
+      "postedBy": "1",
+      "cocktailID": "9"
+    },
+    {
+      "id": "0",
+      "title": "Hard to create",
+      "text": "Very complex but worth the trial!",
+      "postedBy": "0",
+      "cocktailID": "1"
+    }
+  ];
+
   module.exports = {
     cocktails,
     landingSlides,
-    users
+    users,
+    votes
   }

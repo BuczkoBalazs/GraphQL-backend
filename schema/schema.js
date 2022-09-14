@@ -9,6 +9,8 @@ exports.typeDefs = gql`
     landingSlides: [LandingSlide!]!
     user(id: ID!): User
     users: [User!]!
+    vote(id: ID!): Vote
+    votes: [Vote!]!
   }
   type Cocktail {
     id: ID!
@@ -17,7 +19,7 @@ exports.typeDefs = gql`
     ingredients: String!
     image: String!
     favourite: Boolean!
-    userLiked: [User!]! 
+    userLiked: [User!]!
   }
   type LandingSlide {
     id: ID!
@@ -30,5 +32,12 @@ exports.typeDefs = gql`
     email: String!
     age: Int!
     cocktails: [Cocktail!]!
+  }
+  type Vote {
+    id: ID!
+    title: String!
+    text: String!
+    postedBy: User!
+    cocktail: Cocktail!
   }
 `;
