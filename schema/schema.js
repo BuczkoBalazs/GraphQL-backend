@@ -16,6 +16,7 @@ exports.typeDefs = gql`
   type Mutation {
     addLandingSlide(input: AddLandingSlideInput!): LandingSlide!
     deleteLandingSlide(id: ID!): Boolean!
+    updateLandingSlide(id: ID!, input: UpdateLandingSlideInput!): LandingSlide!
   }
 
   type Cocktail {
@@ -61,6 +62,11 @@ exports.typeDefs = gql`
   }
 
   input AddLandingSlideInput {
+    title: String!
+    text: String!
+  }
+
+  input UpdateLandingSlideInput {
     title: String!
     text: String!
   }
