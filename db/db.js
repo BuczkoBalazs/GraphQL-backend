@@ -157,7 +157,7 @@ const landingSlides = [
     }
   ];
 
-  module.exports = {
+  exports.db = {
     cocktails,
     landingSlides,
     users,

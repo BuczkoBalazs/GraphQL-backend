@@ -5,7 +5,7 @@ const { Query } = require('./resolvers/Query');
 const { Mutation } = require('./resolvers/Mutation');
 const { User } = require('./resolvers/User');
 const { Vote } = require('./resolvers/Vote')
-const { cocktails, landingSlides, users, votes } = require('./db/db')
+const { db } = require('./db/db')
 
 const server = new ApolloServer({
   typeDefs,
@@ -17,10 +17,7 @@ const server = new ApolloServer({
     Vote
   },
   context: {
-    cocktails,
-    landingSlides,
-    users,
-    votes
+    db
   }
 });
 

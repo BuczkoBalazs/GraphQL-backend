@@ -15,6 +15,7 @@ exports.typeDefs = gql`
 
   type Mutation {
     addLandingSlide(input: AddLandingSlideInput!): LandingSlide!
+    deleteLandingSlide(id: ID!): Boolean!
   }
 
   type Cocktail {

@@ -1,30 +1,30 @@
 exports.Query = {
-    cocktail: (parent, { id }, { cocktails }) => {
-        const cocktail = cocktails.find(cocktail => cocktail.id === id)
+    cocktail: (parent, { id }, { db }) => {
+        const cocktail = db.cocktails.find(cocktail => cocktail.id === id)
         return cocktail ? cocktail : null 
     },
-    cocktails: (parent, { filter }, { cocktails }) => {
+    cocktails: (parent, { filter }, { db }) => {
       return filter ?
-      cocktails.filter(cocktail => cocktail.name.toLowerCase().includes(filter.name.toLowerCase())) :
+      db.cocktails.filter(cocktail => cocktail.name.toLowerCase().includes(filter.name.toLowerCase())) :
       cocktails
     },
-    landingSlide: (parent, { id }, { landingSlides }) => {
-        const slide = landingSlides.find(slide => slide.id === id)
+    landingSlide: (parent, { id }, { db }) => {
+        const slide = db.landingSlides.find(slide => slide.id === id)
         return slide ? slide : null 
     },
-    landingSlides: (parent, args, { landingSlides }) => landingSlides,
-    user: (parent, { id }, { users }) => {
-      const user = users.find(user => user.id === id)
+    landingSlides: (parent, args, { db }) => db.landingSlides,
+    user: (parent, { id }, { db }) => {
+      const user = db.users.find(user => user.id === id)
       return user ? user : null 
     },
-    users: (parent, { filter }, { users }) => {
+    users: (parent, { filter }, { db }) => {
       return filter ? 
-      users.filter(user => user.age > filter.age) :
-      users
+      db.users.filter(user => user.age > filter.age) :
+      db.users
     },
-    vote: (parent, { id }, { votes }) => {
-        const vote = votes.find(vote => vote.id === id)
+    vote: (parent, { id }, { db }) => {
+        const vote = db.votes.find(vote => vote.id === id)
         return vote ? vote : null 
       },
-    votes: (parent, args, { votes }) => votes,
+    votes: (parent, args, { db }) => db.votes,
 };

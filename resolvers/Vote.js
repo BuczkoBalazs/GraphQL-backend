@@ -1,8 +1,8 @@
 exports.Vote = {
-    postedBy: ({ postedBy }, args, { users }) => {
-        return users.find( user => user.id === postedBy)
+    postedBy: ({ postedBy }, args, { db }) => {
+        return db.users.find( user => user.id === postedBy)
     },
-    cocktailID: ({ cocktailID }, args, { cocktails }) => {
-        return cocktails.find( cocktail => cocktail.id === cocktailID)
+    cocktailID: ({ cocktailID }, args, { db}) => {
+        return db.cocktails.find( cocktail => cocktail.id === cocktailID)
     }
 };
