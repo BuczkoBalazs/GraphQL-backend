@@ -4,13 +4,17 @@ const { gql } = require('apollo-server');
 exports.typeDefs = gql`
   type Query {
     cocktail(id: ID!): Cocktail
-    cocktails(filter: cocktailsFilterInput): [Cocktail!]!
+    cocktails(filter: CocktailsFilterInput): [Cocktail!]!
     landingSlide(id: ID!): LandingSlide
     landingSlides: [LandingSlide!]!
     user(id: ID!): User
-    users(filter: usersFilterInput): [User!]!
+    users(filter: UsersFilterInput): [User!]!
     vote(id: ID!): Vote
     votes: [Vote!]!
+  }
+
+  type Mutation {
+    addLandingSlide(input: AddLandingSlideInput!): LandingSlide!
   }
 
   type Cocktail {
@@ -20,7 +24,7 @@ exports.typeDefs = gql`
     ingredients: String!
     image: String!
     favourite: Boolean!
-    userLiked(filter: usersFilterInput): [User!]!
+    userLiked(filter: UsersFilterInput): [User!]!
     votes: [Vote!]!
   }
 
@@ -35,7 +39,7 @@ exports.typeDefs = gql`
     name: String!
     email: String!
     age: Int!
-    cocktails(filter: cocktailsFilterInput): [Cocktail!]!
+    cocktails(filter: CocktailsFilterInput): [Cocktail!]!
     votes: [Vote!]!
   }
 
@@ -47,12 +51,17 @@ exports.typeDefs = gql`
     cocktailID: Cocktail!
   }
 
-  input cocktailsFilterInput {
+  input CocktailsFilterInput {
     name: String
   }
   
-  input usersFilterInput {
+  input UsersFilterInput {
     age: Int
+  }
+
+  input AddLandingSlideInput {
+    title: String!
+    text: String!
   }
 
 `;
