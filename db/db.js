@@ -111,19 +111,19 @@ const landingSlides = [
   
   const users = [
     {
-      "id": "0",
+      "id": '0',
       "name": "John Doe",
       "email": "john.doe@freemail.hu",
       "age": 83
     },
     {
-      "id": "1",
+      "id": '1',
       "name": "Jane Doe",
       "email": "jane.doe@freemail.hu",
       "age": 22
     },
     {
-      "id": "2",
+      "id": '2',
       "name": "Scooby Doo",
       "email": "scooby.doo@citromail.hu",
       "age": 35
