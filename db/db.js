@@ -114,22 +114,19 @@ const landingSlides = [
       "id": "0",
       "name": "John Doe",
       "email": "john.doe@freemail.hu",
-      "age": 83,
-      "favCocktails": ['1', '2', '3','9', '10']
+      "age": 83
     },
     {
       "id": "1",
       "name": "Jane Doe",
       "email": "jane.doe@freemail.hu",
-      "age": 22,
-      "favCocktails": ['1', '2', '3', '4', '5', '6', '7', '8']
+      "age": 22
     },
     {
       "id": "2",
       "name": "Scooby Doo",
       "email": "scooby.doo@citromail.hu",
-      "age": 35,
-      "favCocktails": ['5', '6', '7', '8', '9', '10']
+      "age": 35
     }
   ];
 
